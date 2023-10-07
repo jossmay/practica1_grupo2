@@ -38,7 +38,7 @@ while True:
 		print("El resultado de la división es:", resultado)
     elif opcion == '3':
         # Salir del programa
-        print("Saliendo...")
+        print("Saliendo.....")
         break
     else:
         print("Opción no válida. Por favor, selecciona una opción válida.")
