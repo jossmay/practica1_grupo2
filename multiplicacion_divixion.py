@@ -42,3 +42,19 @@ while True:
         break
     else:
         print("Opción no válida. Por favor, selecciona una opción válida.")
+
+ # Calcular el factorial de un numero
+def factorial_iterativo(n):
+    if n < 0:
+        return "El factorial no está definido para números negativos"
+    elif n == 0:
+        return 1
+    else:
+        resultado = 1
+        for i in range(1, n + 1):
+            resultado *= i
+        return resultado
+
+numero = int(input("Ingresa un número para calcular su factorial: "))
+resultado = factorial_iterativo(numero)
+print(f"El factorial de {numero} es: {resultado}")
