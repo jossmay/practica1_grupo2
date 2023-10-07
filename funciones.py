@@ -64,3 +64,17 @@ while True:
         break
     else:
         print("Opción no válida. Por favor, seleccione una opción válida.")
+
+ # Calcula el área del triángulo equilátero
+
+def area_triangulo_equilatero(lado):
+    
+    area = (lado ** 2 * (3 ** 0.5)) / 4
+    return area
+
+# Ingresa la longitud del lado del triángulo equilátero
+longitud_lado = float(input("Ingresa la longitud del lado del triángulo equilátero: "))
+
+# Calcula y muestra el área del triángulo
+area = area_triangulo_equilatero(longitud_lado)
+print(f"El área del triángulo equilátero con lado de longitud {longitud_lado} es: {area}")
