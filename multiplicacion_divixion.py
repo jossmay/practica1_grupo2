@@ -4,9 +4,11 @@ def multiplicar(a, b):
 
 # Función para realizar la división
 def dividir(a, b):
-    if b == 0:
-        return "Error: No se puede dividir por cero."
-    return a / b
+    try:
+        resultado = a / b
+        return resultado
+    except ZeroDivisionError:
+        return "Error: No se puede dividir entre cero."
 
 while True:
     # Mostrar el menú
@@ -29,11 +31,14 @@ while True:
         # División
         num1 = float(input("Ingresa el primer número: "))
         num2 = float(input("Ingresa el segundo número: "))
-        resultado = dividir(num1, num2)
-        print("El resultado de la división es:", resultado)
+	if num2 == 0:
+        	print("¡Cuidado! Estás dividiendo entre cero.")
+    	else:
+       		resultado = dividir(num1, num2)
+		print("El resultado de la división es:", resultado)
     elif opcion == '3':
         # Salir del programa
-        print("¡Hasta luego!")
+        print("Saliendo...")
         break
     else:
         print("Opción no válida. Por favor, selecciona una opción válida.")
