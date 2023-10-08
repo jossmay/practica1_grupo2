@@ -64,3 +64,12 @@ while True:
         break
     else:
         print("Opción no válida. Por favor, seleccione una opción válida.")
+
+# Solicita al usuario la longitud del lado del cuadrado
+lado = float(input("Ingrese la longitud del lado del cuadrado: "))
+
+# Calcula el área del cuadrado
+area = lado * lado
+
+# Imprime el resultado
+print(f"El área del cuadrado con lado {lado} es {area}")
