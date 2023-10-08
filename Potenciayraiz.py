@@ -1,25 +1,47 @@
-# Importar la biblioteca math para usar la función de raíz cúbica
-import math
+# Función para realizar la suma
+def suma(a, b):
+    return a + b
 
-# Función para calcular la potencia al cubo
-def potencia_al_cubo(numero):
-    return numero ** 3
+# Función para realizar la resta
+def resta(a, b):
+    return a - b
 
-# Función para calcular la raíz cúbica
-def raiz_cubica(numero):
-    return math.pow(numero, 1/3)
+# Función para realizar la multiplicación
+def multiplicacion(a, b):
+    return a * b
 
-# Solicitar al usuario ingresar un número
-try:
-    numero = float(input("Por favor, ingresa un número: "))
+# Función para realizar la división
+def division(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "No se puede dividir por cero."
 
-    # Calcular y mostrar la potencia al cubo
-    resultado_potencia = potencia_al_cubo(numero)
-    print(f"La potencia al cubo de {numero} es: {resultado_potencia}")
-
-    # Calcular y mostrar la raíz cúbica
-    resultado_raiz = raiz_cubica(numero)
-    print(f"La raíz cúbica de {numero} es: {resultado_raiz}")
-
-except ValueError:
-    print("Por favor, ingresa un número válido.")
+# Menú principal
+while True:
+    print("Calculadora Simple")
+    print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicación")
+    print("4. División")
+    print("5. Salir")
+    
+    opcion = input("Seleccione una opción: ")
+    
+    if opcion in ["1", "2", "3", "4"]:
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+        
+        if opcion == "1":
+            print("Resultado: ", suma(num1, num2))
+        elif opcion == "2":
+            print("Resultado: ", resta(num1, num2))
+        elif opcion == "3":
+            print("Resultado: ", multiplicacion(num1, num2))
+        elif opcion == "4":
+            print("Resultado: ", division(num1, num2))
+    elif opcion == "5":
+        print("¡Hasta luego!")
+        break
+    else:
+        print("Opción inválida. Por favor, seleccione una opción válida.")
