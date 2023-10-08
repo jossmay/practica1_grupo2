@@ -64,3 +64,15 @@ while True:
         break
     else:
         print("Opción no válida. Por favor, seleccione una opción válida.")
+
+#Se agrega funcionalidad para calcular area de un triangulo
+
+# Pedir al usuario que ingrese la base y la altura del triángulo
+base = float(input("Ingrese la longitud de la base del triángulo: "))
+altura = float(input("Ingrese la altura del triángulo: "))
+
+# Calcular el área del triángulo
+area = (base * altura) / 2
+
+# Mostrar el resultado
+print(f"El área del triángulo con base {base} y altura {altura} es: {area}")
