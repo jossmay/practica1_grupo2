@@ -78,3 +78,5 @@ longitud_lado = float(input("Ingresa la longitud del lado del triángulo equilá
 # Calcula y muestra el área del triángulo
 area = area_triangulo_equilatero(longitud_lado)
 print(f"El área del triángulo equilátero con lado de longitud {longitud_lado} es: {area}")
+
+Nuevo BugFix de prueba
